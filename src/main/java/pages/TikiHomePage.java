@@ -54,7 +54,7 @@ public class TikiHomePage extends BasePage {
    Assert.assertTrue(product.getText().toLowerCase().contains("iphone"));
   }
  }
- public List<Product> sortAndPrintProduct(){
+ public List<Product> getListProduct(){
   List<Product> ls= new ArrayList<>();
   for(WebElement pro : listProduct) {
    Product product= new Product();
@@ -75,6 +75,4 @@ public class TikiHomePage extends BasePage {
    }
   });
  }
-//div[@class='inner']//div[@class='price-discount__price']
- //div[@class='inner']//a[@class='product-item']
 }

@@ -14,9 +14,9 @@ public class TestTiki extends BaseTest {
         tikiHomePage.nagativeToTikiHomePage("https://tiki.vn/");
         tikiHomePage.sendKeyToSearchTextbox("IPhone 11");
         tikiHomePage.clickToSearchButton();
-        //tikiHomePage.verifyListProductIphone();
-       List<Product> ls= tikiHomePage.sortAndPrintProduct();
-       tikiHomePage.sort(ls);
+        tikiHomePage.verifyListProductIphone();
+        List<Product> ls= tikiHomePage.getListProduct();
+        tikiHomePage.sort(ls);
         for (Product pr:ls) {
             System.out.println(pr);
         }
