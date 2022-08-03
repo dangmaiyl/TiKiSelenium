@@ -58,11 +58,11 @@ public class TikiHomePage extends BasePage {
   List<Product> ls= new ArrayList<>();
   for(WebElement pro : listProduct) {
    Product product= new Product();
-   String name= pro.findElement(By.xpath("//div[@class='name']")).getText();
+   String name= pro.findElement(By.xpath(".//div[@class='name']")).getText();
    product.setNameProduct(name);
-   int price= Integer.parseInt(pro.findElement(By.xpath("//div[@class='price-discount__price']")).getText().split(" ")[0].replace(".", ""));
+   int price= Integer.parseInt(pro.findElement(By.xpath(".//div[@class='price-discount__price']")).getText().split(" ")[0].replace(".", ""));
    product.setPrice(price);
-   String link= pro.findElement(By.xpath("//a[@class='product-item']")).getAttribute("href");
+   String link= pro.getAttribute("href");
    product.setLinkProduct(link);
    ls.add(product);
   }
